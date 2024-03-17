@@ -7,12 +7,11 @@ class Solution {
         if(n == 2) return 2;
         var step1 = 1;
         var step2 = 2;
-        var step3 = 0;
-        for(i in 3 until n + 1) {
-            step3 = step1 + step2;
+        for(i in 3..n) {
+            val step3 = step1 + step2;
             step1 = step2;
             step2 = step3;
         }
-        return step3;
+        return step2;
     }
 }
